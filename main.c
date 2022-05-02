@@ -22,7 +22,7 @@ int main(int argc, char** argv) {
   while (1) {
     char* input = readline("unlisp> ");
 		add_history(input);
-		printf(input);
+		printf("No you're a %s\n", input);
     free(input);
   }
   return 0;
