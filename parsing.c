@@ -20,17 +20,19 @@ int main(int argc, char** argv) {
   ",
   Number, Operator, Expr, unlisp);
   while(1) {
-    char* input = readline("unlisp> ");
+    printf("unlisp >");
+    char input[256];
+    fgets(input, 256, stdin);
  	add_history(input);
 		mpc_result_t r;
 		if (mpc_parse("<stdin>", input, unlisp, &r)) {
-		mpc_ast_print(r.output);
-		mpc_ast_delete(r.output);
+      mpc_ast_print(r.output);
+      mpc_ast_delete(r.output);
 }		else {
-		mpc_err_print(r.error);
-		mpc_err_delete(r.error);
+      mpc_err_print(r.error);
+      mpc_err_delete(r.error);
 }
-  /* Load AST from output */
+    /* Load AST from output */
   }
   return 0;
 }
