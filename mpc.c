@@ -227,13 +227,11 @@ static void mpc_input_delete(mpc_input_t *i) {
   free(i->lasts);
   free(i);
 }
-
 static int mpc_mem_ptr(mpc_input_t *i, void *p) {
   return
     (char*)p >= (char*)(i->mem) &&
     (char*)p <  (char*)(i->mem) + (MPC_INPUT_MEM_NUM * sizeof(mpc_mem_t));
 }
-
 static void *mpc_malloc(mpc_input_t *i, size_t n) {
   size_t j;
   char *p;
