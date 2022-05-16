@@ -2,7 +2,10 @@
 Lips language made in C
 I am using the mpc parser combinator:
 https://github.com/orangeduck/mpc
-
+dont be surprised if its absolutely not a language, its just the beginning.
+im doing some test for the paser combinator for the moment.
+I think the official lisp lang development will begin in 2-3 weeks.
+05/16/22
 
 
 
