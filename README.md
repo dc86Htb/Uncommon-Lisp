@@ -15,7 +15,7 @@ I think im gonna write my own parser, i feel bad to use a premade one. Im going 
 
 ## 05/28/22 
 
-Im still working the parser, i will push tomorrow if everything is good.
+Im still working on the parser, i will push tomorrow if everything is good.
 
 
 
