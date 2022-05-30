@@ -18,7 +18,9 @@ I think im gonna write my own parser, i feel bad to use a premade one. Im going 
 Im still working on the parser, i will push tomorrow if everything is good.
 
 
+## 05/30/22
 
+Fun fact everything is not good so i will probably do this tomorrow night.
 
 
 
