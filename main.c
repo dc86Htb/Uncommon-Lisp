@@ -1,5 +1,5 @@
 #include "mpc.h"
-
+// for windows user 
 #ifdef _WIN32
 
 static char buffer[2048];
