@@ -11,17 +11,19 @@ I think the official lisp lang development will begin in 2-3 weeks.
 
 
 ## 05/19/22
-I think im gonna write my own parser, i feel bad to use a premade one. Im going to do that this week.
+I think im gonna write my own parser combinator, i feel bad to use a premade one. Im going to do that this week.
 
 ## 05/28/22 
 
-Im still working on the parser, i will push tomorrow if everything is good.
+Im still working on the parser comb, i will push tomorrow if everything is good.
 
 
 ## 05/30/22
 
 Fun fact everything is not good so i will probably do this tomorrow night.
 
+## 01/07/22
+After one month of inactivity, i decided to keep the mpc parser combinator. I will change I promise but not for the moment.
 
 
 
