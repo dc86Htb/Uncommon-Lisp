@@ -17,6 +17,7 @@ void add_history(char* unused) {}
 
 #else
 #include <editline/readline.h>
+#include <stdlib.h>
 #endif
 
 /* use strcmp to compare op and "operator" to know what operation to do*/
@@ -25,6 +26,7 @@ long eval_op(long x, char* op, long y) {
   if (strcmp(op, "-") == 0) { return x - y; }
   if (strcmp(op, "*") == 0) { return x * y; }
   if (strcmp(op, "/") == 0) { return x / y; }
+
   return 0;
 }
 /*------------------------------------------------------------------*/
@@ -78,7 +80,9 @@ int main(int argc, char** argv) {
   
     char* input = readline("unlisp> ");
     add_history(input);
-    
+    if(strcmp(input, "exit") == 0){
+        exit(0);
+     }
     mpc_result_t r;
     if (mpc_parse("<stdin>", input, unlisp, &r)) {
       
