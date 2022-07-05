@@ -1,7 +1,6 @@
 #include "mpc.h"
-// for windows user 
+// readline for faggot... I mean windows user.
 #ifdef _WIN32
-
 static char buffer[2048];
 char* readline(char* prompt) {
   fputs(prompt, stdout);
@@ -11,14 +10,16 @@ char* readline(char* prompt) {
   cpy[strlen(cpy)-1] = '\0';
   return cpy;
 }
-
 void add_history(char* unused) {}
+
+/*---------------------------------------------------------------------------*/
+
 
 #else
 #include <editline/readline.h>
 #endif
 
-/* Use operator string to see which operation to perform */
+/* use strcmp to compare op and "operator" to know what operation to do*/
 long eval_op(long x, char* op, long y) {
   if (strcmp(op, "+") == 0) { return x + y; }
   if (strcmp(op, "-") == 0) { return x - y; }
@@ -26,6 +27,8 @@ long eval_op(long x, char* op, long y) {
   if (strcmp(op, "/") == 0) { return x / y; }
   return 0;
 }
+/*------------------------------------------------------------------*/
+
 
 long eval(mpc_ast_t* t) {
   
@@ -49,9 +52,11 @@ long eval(mpc_ast_t* t) {
   
   return x;  
 }
+/*---------------------------------------------------------------------------*/
+
 
 int main(int argc, char** argv) {
-  
+    /* create parser with the mpc parser combinator */  
   mpc_parser_t* Number = mpc_new("number");
   mpc_parser_t* Operator = mpc_new("operator");
   mpc_parser_t* Expr = mpc_new("expr");
@@ -68,7 +73,7 @@ int main(int argc, char** argv) {
   
   puts("unlisp Version 0.0.0.0.1");
   puts("Press Ctrl+c to Exit\n");
-  
+ /* start REPL */ 
   while (1) {
   
     char* input = readline("unlisp> ");
