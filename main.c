@@ -23,11 +23,6 @@ void add_history(char* unused) {}
 #include <stdlib.h>
 #endif
 /* more error handling */
-typedef struct {
-    int type;
-    long num;
-    int err;
-} lval;
 enum { LVAL_NUM, LVAL_ERR };
 enum { LERR_DIV_ZERO, LERR_BAD_OP, LERR_BAD_NUM };
 /* use strcmp to compare op and "operator" to know what operation to do*/

@@ -25,6 +25,11 @@ extern "C" {
 /*
 ** State Type
 */
+typedef struct {
+    int type;
+    long num;
+    int err;
+} lval;
 
 typedef struct {
   long pos;
